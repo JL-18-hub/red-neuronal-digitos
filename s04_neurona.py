@@ -75,3 +75,12 @@ for epoca in range(epocas):
 for x, y in zip(X, Y):
     a = forward(x, w, b)
     print(x, "->", round(float(a), 3), "esperado:", y)
+
+# --- Ejercicio S4: intentar la puerta XOR con una neurona ---
+Y_xor = np.array([0, 1, 1, 0])
+# reinicia w y b como al principio, y vuelve a lanzar el mismo bucle de entrenamiento con Y_xor
+w = np.random.randn(2) * 0.1
+b = 0.0
+for x, y in zip(X, Y_xor):
+    a = forward(x, w, b)
+    print(x, "->", round(float(a), 3), "esperado:", y)
